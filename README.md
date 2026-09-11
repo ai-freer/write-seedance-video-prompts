@@ -1,3 +1,5 @@
+[简体中文](README.md) | [English](README.en.md)
+
 # Seedance 2.5 视频 Prompt Skill
 
 一个面向 Seedance 2.5 的路由型视频创作 Skill。它不是固定 Prompt 模板，而是根据创作成本、视频长度、操作类型、人物资产和控制精度，选择合适的工作流并编译出可执行生成包。
@@ -97,6 +99,7 @@ Skill 会先让用户选择：
 ```text
 write-seedance-video-prompts/
 ├── README.md
+├── README.en.md
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
@@ -121,6 +124,8 @@ write-seedance-video-prompts/
 ```
 
 ## 文档导航
+
+英文版 README 见顶部链接；其余 Skill 与参考文档目前以中文编写。
 
 | 文档 | 职责 |
 | --- | --- |
