@@ -1,0 +1,48 @@
+schema_version: 1
+
+project:
+  id: ""
+  title: ""
+  status: planning
+  root: ""
+
+workflow:
+  path: unset
+  gates:
+    brief: pending
+    assets: pending
+    storyboard: pending
+    final_package: pending
+  gate_decisions: []
+
+video:
+  operation: unset
+  strategy: unset
+  planning_granularity: unset
+  duration_seconds: null
+  aspect_ratio: ""
+  resolution: 720p
+  seedance_mode: unset
+  # 项目目标总时长用 duration_seconds；需要分段或续写时填写 clips。
+  clips: []
+
+image_assets:
+  target_model: unset
+
+creative:
+  goal: ""
+  audience: ""
+  one_line: ""
+  audio_policy: ""
+  subtitle_policy: ""
+  dialogue_language: ""
+  subtitle_language: ""
+  scene_text_policy: ""
+
+paths:
+  asset_registry: asset-registry.yaml
+  brief: brief.md
+  assets: assets
+  storyboards: storyboards
+  prompts: prompts
+  outputs: outputs

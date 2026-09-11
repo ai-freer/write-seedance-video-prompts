@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance 2.5 视频 Prompt"
+  short_description: "规划资产、分镜并生成 Seedance 2.5 视频提示词"
+  default_prompt: "使用 $write-seedance-video-prompts 规划视频资产并撰写一份 Seedance 2.5 Prompt。"

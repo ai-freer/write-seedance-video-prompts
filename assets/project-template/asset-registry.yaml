@@ -1,0 +1,13 @@
+schema_version: 1
+project_id: ""
+
+# 实体文件统一登记在 assets；下方各类实体通过 asset_ids 关联文件。
+assets: []
+characters: []
+looks: []
+locations: []
+props: []
+audio: []
+source_videos: []
+storyboards: []
+generation_bundles: []

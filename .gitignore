@@ -1,0 +1,17 @@
+# OS and runtime artifacts
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+
+# Local credentials and installer metadata; never publish account state
+.env
+.env.*
+!.env.example
+.publish-meta.json
+.skill-lock.json
+
+# Optional local work areas, not shared templates
+/private/
+/local/
+/outputs/
