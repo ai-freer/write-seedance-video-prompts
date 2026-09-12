@@ -4,7 +4,7 @@
 
 一个面向 Seedance 2.5 的路由型视频创作 Skill。它不是固定 Prompt 模板，而是根据创作成本、视频长度、操作类型、人物资产和控制精度，选择合适的工作流并编译出可执行生成包。
 
-> 当前状态：v0.2 手册对照与控制规则更新。已补充官方案例模式、按操作编译和兼容状态字段；离线验证不等于视频效果实测。不自动调用付费生成，也未增加初始化脚本或全局安装包。
+> 当前状态：v0.3.0 创作与迭代升级。在既有官方能力规则上增加镜头任务、空间与表演、参考职责、试拍和粗剪反馈；第三方案例经验与官方能力分开。离线验证不等于视频效果实测，不自动调用付费生成。
 
 ## 解决什么问题
 
@@ -53,6 +53,12 @@
 文字规格用于生成和验收角色设定图；正式视频通过已批准参考图资产锁定身份。次要人物默认使用 Prompt 多维描述，需要跨镜头稳定时再升级为受管资产。
 
 ## 使用方式
+
+### 从能力控制到创作闭环
+
+新增的[创作与迭代指南](references/creative-direction.md)把观众体验转成可见动作、镜头揭示和进出状态，包含两个原创 Prompt 推演示例。精细项目按风险选择代表镜头试拍，并根据实际看片决定裁切、补资产、改镜头或重制，而非默认重抽。
+
+可独立使用，也可配合导演工作台：已有工作台档案时沿用其唯一主档，不再创建平行 YAML/TXT。工作台负责对象、版本、媒体与剪辑关系，本 Skill 负责生成设置、引用映射、Prompt 和创作预检；无需新增工作台 API。
 
 当该 Skill 已被支持 Skills 的客户端加载后，可直接发起：
 
@@ -109,6 +115,7 @@ write-seedance-video-prompts/
 │   ├── prompt-compiler.md
 │   ├── seedance-2.5-reference.md
 │   ├── case-patterns.md
+│   ├── creative-direction.md
 │   └── image-asset-generation.md
 ├── assets/
 │   └── project-template/
@@ -131,6 +138,7 @@ write-seedance-video-prompts/
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | Agent 运行时入口、强制顺序和条件路由 |
 | [`docs/design/system-design.md`](docs/design/system-design.md) | 总体架构、设计依据、状态体系和演进路线 |
+| [`docs/creative-upgrade-validation.md`](docs/creative-upgrade-validation.md) | v0.3 升级范围、场景检查与验证边界 |
 | [`docs/plans/2026-08-03-v0.1-implementation.md`](docs/plans/2026-08-03-v0.1-implementation.md) | v0.1 实施过程与验证记录 |
 | [`docs/plans/2026-09-06-v0.2-update.md`](docs/plans/2026-09-06-v0.2-update.md) | v0.2 手册覆盖、更新范围与验证边界 |
 | [`references/workflow-router.md`](references/workflow-router.md) | 多轴路由与两条创作路径 |
@@ -138,6 +146,7 @@ write-seedance-video-prompts/
 | [`references/prompt-compiler.md`](references/prompt-compiler.md) | 生成、续写、编辑和拼接 Prompt 编译 |
 | [`references/seedance-2.5-reference.md`](references/seedance-2.5-reference.md) | Seedance 2.5 官方能力与边界速查 |
 | [`references/case-patterns.md`](references/case-patterns.md) | 按目标选择官方案例模式，以及示例冲突与失败风险 |
+| [`references/creative-direction.md`](references/creative-direction.md) | 第三方案例启发、原创推演、镜头任务与迭代闭环 |
 | [`references/image-asset-generation.md`](references/image-asset-generation.md) | GPT、Gemini、Seedream、Grok Image 生图适配 |
 
 ## 文档职责与事实来源

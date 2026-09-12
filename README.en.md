@@ -4,7 +4,7 @@
 
 A workflow-routing skill for Seedance 2.5 video creation. Rather than using a fixed prompt template, it selects a workflow based on production cost, video length, operation type, character assets, and the level of control required, then compiles a ready-to-use generation package.
 
-> Current status: v0.2 manual review and control-rule update. Includes patterns distilled from official examples, operation-specific prompt compilation, and backward-compatible state fields. Offline validation is not a test of actual video quality. The skill does not automatically invoke paid generation, and no initialization script or global installation package has been added.
+> Current status: v0.3.0 creative-direction and iteration update. Adds shot purpose, space and performance, reference responsibilities, selective test shots, and rough-cut feedback on top of the existing official capability rules. Third-party production lessons remain separate from official capabilities. Offline validation is not a test of actual video quality; paid generation is not automatic.
 
 ## What It Helps With
 
@@ -53,6 +53,12 @@ Character visual specification
 Text specifications guide the creation and review of character sheets; production videos use approved visual reference assets to anchor identity. Supporting characters default to descriptive prompts across relevant visual dimensions and become managed assets when consistency across shots matters.
 
 ## Usage
+
+### From Model Controls to a Creative Feedback Loop
+
+The new [creative-direction guide](references/creative-direction.md) translates audience experience into visible actions, shot reveals, and entry/exit states, with two original prompt walkthroughs. Precision projects may test representative risks first, then use actual viewing to choose between trimming, improving assets, revising shots, or regenerating—not default retries.
+
+Use the skill independently or with a director workbench. An existing workbench remains the single source of truth, with no parallel YAML/TXT master. The workbench owns records, versions, media, and editorial relationships; this skill supplies generation settings, reference mappings, prompts, and creative preflight. No new workbench API is required.
 
 Once a client that supports skills has loaded this skill, start with:
 
@@ -109,6 +115,7 @@ write-seedance-video-prompts/
 │   ├── prompt-compiler.md
 │   ├── seedance-2.5-reference.md
 │   ├── case-patterns.md
+│   ├── creative-direction.md
 │   └── image-asset-generation.md
 ├── assets/
 │   └── project-template/
@@ -131,6 +138,7 @@ The Chinese README is linked at the top. The skill instructions and supporting d
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | Agent runtime entry point, required ordering, and conditional routing |
 | [`docs/design/system-design.md`](docs/design/system-design.md) | Overall architecture, design rationale, state model, and roadmap |
+| [`docs/creative-upgrade-validation.md`](docs/creative-upgrade-validation.md) | v0.3 scope, scenario review, and validation limits |
 | [`docs/plans/2026-08-03-v0.1-implementation.md`](docs/plans/2026-08-03-v0.1-implementation.md) | v0.1 implementation and validation record |
 | [`docs/plans/2026-09-06-v0.2-update.md`](docs/plans/2026-09-06-v0.2-update.md) | v0.2 manual coverage, update scope, and validation limits |
 | [`references/workflow-router.md`](references/workflow-router.md) | Multi-axis routing and the two creative paths |
@@ -138,6 +146,7 @@ The Chinese README is linked at the top. The skill instructions and supporting d
 | [`references/prompt-compiler.md`](references/prompt-compiler.md) | Prompt compilation for generation, extension, editing, and transitions |
 | [`references/seedance-2.5-reference.md`](references/seedance-2.5-reference.md) | Quick reference for official Seedance 2.5 capabilities and limits |
 | [`references/case-patterns.md`](references/case-patterns.md) | Selecting official example patterns by goal, with example conflicts and failure risks |
+| [`references/creative-direction.md`](references/creative-direction.md) | Third-party inspirations, original walkthroughs, shot purpose, and iteration |
 | [`references/image-asset-generation.md`](references/image-asset-generation.md) | Image-prompt adaptation for GPT, Gemini, Seedream, and Grok Image |
 
 ## Document Responsibilities and Sources of Truth
